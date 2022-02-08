@@ -24,7 +24,7 @@ jobs:
         with:
           channel: 'stable'
       - name: Build Website
-      - run: |
+        run: |
           flutter pub get
           flutter test
           flutter build web
