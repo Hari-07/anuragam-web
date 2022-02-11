@@ -1,3 +1,5 @@
+import 'package:anuragam_website/views/widgets/receive_field.dart';
+import 'package:anuragam_website/views/widgets/send_message.dart';
 import 'package:anuragam_website/views/widgets/timer.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -7,38 +9,59 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.fromLTRB(0, 20, 0, 20),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: const [Timer()],
-              ),
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+    return Container(
+      decoration: const BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage('assets/anuragm.jpg'), fit: BoxFit.cover)),
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
+        body: SingleChildScrollView(
+          child: Center(
+            child: Column(
               children: [
-                ElevatedButton(
-                  onPressed: () {
-                    context.go('/receive');
-                  },
-                  child: const Text('Get Love'),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 20, 0, 20),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: const [Timer()],
+                  ),
                 ),
                 const SizedBox(
-                  width: 20,
+                  height: 20,
                 ),
-                ElevatedButton(
-                  onPressed: () {
-                    context.go('/give');
-                  },
-                  child: const Text('Send Love'),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: const [
+                    Receive_Message(),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Send_Message(),
+                  ],
                 ),
+                // Row(
+                //   mainAxisAlignment: MainAxisAlignment.center,
+                //   children: [
+                // ElevatedButton(
+                //   onPressed: () {
+                //     context.go('/receive');
+                //   },
+                //   child: const Text('Get Love'),
+                // ),
+                //     const SizedBox(
+                //       width: 20,
+                //     ),
+                //     ElevatedButton(
+                //       onPressed: () {
+                //         context.go('/give');
+                //       },
+                //       child: const Text('Send Love'),
+                //     ),
+                //   ],
+                // ),
               ],
             ),
-          ],
+          ),
         ),
       ),
     );
