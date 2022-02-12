@@ -1,6 +1,7 @@
 import 'package:anuragam_website/views/widgets/banner_widget.dart';
 import 'package:anuragam_website/views/widgets/banner_widget.dart';
 import 'package:anuragam_website/views/widgets/message_section.dart';
+import 'package:anuragam_website/views/widgets/receive_field.dart';
 import 'package:anuragam_website/views/widgets/song_section.dart';
 import 'package:anuragam_website/views/widgets/title_widget.dart';
 import 'package:flutter/material.dart';
@@ -33,6 +34,7 @@ class HomePage extends StatelessWidget {
                 height: 200,
                 child: MessageSection(),
               ),
+              ReceiveMessage(title: 'Receive'),
               // TitleWidget(), //Heading and Substring
               Container(
                 // TODO:TEMPORARY FOR VISIBILITY

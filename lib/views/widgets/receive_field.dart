@@ -1,5 +1,7 @@
+import 'dart:ui';
+
+import 'package:anuragam_website/views/widgets/blur_child.dart';
 import 'package:flutter/material.dart';
-import 'package:glassmorphism/glassmorphism.dart';
 
 class ReceiveMessage extends StatelessWidget {
   const ReceiveMessage({
@@ -12,50 +14,50 @@ class ReceiveMessage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 320,
-      padding: const EdgeInsets.all(10),
-      color: Colors.green,
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Row(
-            children: [
-              Expanded(
-                flex: 2,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Text(
-                      title,
-                      style: const TextStyle(
-                        fontSize: 24,
-                        color: Colors.white,
+    return BlurChild(
+      child: Container(
+        width: 300,
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Row(
+              children: [
+                Expanded(
+                  flex: 2,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text(
+                        title,
+                        style: const TextStyle(
+                          fontSize: 24,
+                          color: Colors.white,
+                        ),
                       ),
-                    ),
-                    const Text(
-                      'A egestas quam etiam dui leo, nisi sit fames feugiat. Nisi, sit feugiat purus, integer aenean tortor orci.',
-                      style: TextStyle(fontSize: 18, color: Colors.white),
-                    ),
-                  ],
+                      const Text(
+                        'A egestas quam etiam dui leo, nisi sit fames feugiat. Nisi, sit feugiat purus, integer aenean tortor orci.',
+                        style: TextStyle(fontSize: 18, color: Colors.white),
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-              Expanded(child: Image.asset('assets/receive_message.png'))
-            ],
-          ),
-          const SizedBox(
-            height: 10,
-          ),
-          const Text(
-            'A egestas quam etiam dui leo, nisi sit fames feugiat. Nisi, sit feugiat purus, integer aenean tortor orci.A egestas quam etiam dui leo, nisi sit fames feugiat. Nisi, sit feugiat ....',
-            style: TextStyle(
-              fontSize: 18,
-              color: Colors.white,
+                Expanded(child: Image.asset('assets/receive_message.png'))
+              ],
             ),
-          ),
-          // const TextButton(onPressed: onPressed, child: child,)
-        ],
+            const SizedBox(
+              height: 10,
+            ),
+            const Text(
+              'A egestas quam etiam dui leo, nisi sit fames feugiat. Nisi, sit feugiat purus, integer aenean tortor orci.A egestas quam etiam dui leo, nisi sit fames feugiat. Nisi, sit feugiat ....',
+              style: TextStyle(
+                fontSize: 18,
+                color: Colors.white,
+              ),
+            ),
+            // const TextButton(onPressed: onPressed, child: child,)
+          ],
+        ),
       ),
     );
   }
