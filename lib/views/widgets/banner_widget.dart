@@ -15,8 +15,8 @@ class BannerWidget extends StatelessWidget {
           child: Container(
             child: Column(
               mainAxisSize: MainAxisSize.min,
-              children: const [
-                Text(
+              children: [
+                const Text(
                   'ANURAGAM',
                   style: TextStyle(
                     fontWeight: FontWeight.w400,
@@ -25,7 +25,27 @@ class BannerWidget extends StatelessWidget {
                     color: Colors.white,
                   ),
                 ),
-                Timer(),
+                const Timer(),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Container(
+                      height: 100,
+                      width: 100,
+                      color: Colors.white,
+                    ),
+                    Container(
+                      height: 100,
+                      width: 100,
+                      color: Colors.white,
+                    ),
+                    Container(
+                      height: 100,
+                      width: 100,
+                      color: Colors.white,
+                    ),
+                  ],  
+                )
               ],
             ),
           ),

@@ -18,7 +18,6 @@ class HomePage extends StatelessWidget {
             fit: BoxFit.cover,
           ),
         ),
-        padding: const EdgeInsets.all(20),
         child: SingleChildScrollView(
           child: Column(
             children: const [
