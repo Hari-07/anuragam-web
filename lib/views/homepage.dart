@@ -39,6 +39,23 @@ class HomePage extends StatelessWidget {
                     Receive_Message()
                   ],
                 ),
+                const SizedBox(
+                  height: 20,
+                ),
+                Center(
+                  child: Column(
+                    // ignore: prefer_const_literals_to_create_immutables
+                    children: [
+                      const Text(
+                        'Music is an emotion',
+                        style: TextStyle(
+                          fontSize: 36,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ],
+                  ),
+                )
                 // Row(
                 //   mainAxisAlignment: MainAxisAlignment.center,
                 //   children: [
