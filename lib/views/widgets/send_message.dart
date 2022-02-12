@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:glassmorphism/glassmorphism.dart';
@@ -17,42 +19,50 @@ class Send_Message extends StatelessWidget {
         begin: Alignment.topLeft,
         end: Alignment.bottomRight,
         colors: [
-          Color(0xFFffffff).withOpacity(0.2),
-          Color((0xFFFFFFFF)).withOpacity(0.2),
+          const Color(0xFFffffff).withOpacity(0.2),
+          const Color((0xFFFFFFFF)).withOpacity(0.2),
         ],
       ),
       linearGradient: LinearGradient(
         begin: Alignment.topLeft,
         end: Alignment.bottomRight,
         colors: [
-          Color(0xFFffffff).withOpacity(0.2),
-          Color((0xFFFFFFFF)).withOpacity(0.2),
+          const Color(0xFFffffff).withOpacity(0.2),
+          const Color((0xFFFFFFFF)).withOpacity(0.2),
         ],
       ),
       child: Column(children: [
         const Padding(
-          padding: EdgeInsets.fromLTRB(30, 80, 30, 0),
+          padding: EdgeInsets.fromLTRB(30, 50, 30, 0),
           child: Text(
-              "What is Lorem Ipsum?Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
+              "What is Lorey text of the printing a software like Aldus PageMaker including versions of Lorem Ipsum",
               style: TextStyle(color: Colors.white)),
         ),
         const SizedBox(
           height: 20,
         ),
-        ElevatedButton(
-            onPressed: () {},
-            child: Form(
-                child: Column(
-              children: [
-                Container(
-                  height: 40,
-                  width: 200,
-                  child: TextFormField(
-                    decoration: const InputDecoration(hintText: 'Name'),
-                  ),
-                )
-              ],
-            )))
+        Form(
+          child: Column(
+            children: [
+              TextFormField(
+                style: const TextStyle(color: Colors.white),
+                decoration: const InputDecoration(hintText: 'Name'),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              TextFormField(
+                style: const TextStyle(color: Colors.white),
+                decoration:
+                    const InputDecoration(hintText: 'Type your message...'),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              ElevatedButton(onPressed: () {}, child: const Text('Send'))
+            ],
+          ),
+        ),
       ]),
     );
   }
