@@ -36,8 +36,7 @@ class HomePage extends StatelessWidget {
               // TitleWidget(), //Heading and Substring
               Container(
                 // TODO:TEMPORARY FOR VISIBILITY
-                color: Colors.white,
-                height: 200,
+                height: 250,
                 child: SongSection(),
               ),
               // SongSection(),
