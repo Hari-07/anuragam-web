@@ -28,9 +28,14 @@ class MyApp extends StatelessWidget {
                       const Color.fromARGB(255, 255, 147, 152)),
                   shadowColor: MaterialStateProperty.all(Colors.pinkAccent))),
           scaffoldBackgroundColor: const Color.fromARGB(255, 247, 243, 244),
-          primarySwatch: Colors.pink,
           textTheme: GoogleFonts.loveYaLikeASisterTextTheme(
-              Theme.of(context).textTheme)),
+              Theme.of(context).textTheme),
+          inputDecorationTheme: InputDecorationTheme(
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(5),
+            ),
+            hintStyle: TextStyle(color: Colors.white),
+          )),
     );
   }
 }

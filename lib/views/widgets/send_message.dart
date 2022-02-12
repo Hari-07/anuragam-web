@@ -8,8 +8,8 @@ class Send_Message extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GlassmorphicContainer(
-      width: 400,
-      height: 400,
+      width: 450,
+      height: 450,
       borderRadius: 20,
       blur: 10,
       border: .5,
@@ -39,20 +39,31 @@ class Send_Message extends StatelessWidget {
         const SizedBox(
           height: 20,
         ),
-        ElevatedButton(
-            onPressed: () {},
-            child: Form(
-                child: Column(
-              children: [
-                Container(
-                  height: 40,
-                  width: 200,
-                  child: TextFormField(
-                    decoration: const InputDecoration(hintText: 'Name'),
-                  ),
-                )
-              ],
-            )))
+        Form(
+            child: Container(
+          height: 152,
+          width: 200,
+          child: Column(
+            children: [
+              TextFormField(
+                style: const TextStyle(color: Colors.white),
+                decoration: const InputDecoration(hintText: 'Name'),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              TextFormField(
+                style: const TextStyle(color: Colors.white),
+                decoration:
+                    const InputDecoration(hintText: 'Type your message...'),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              ElevatedButton(onPressed: () {}, child: const Text('Send'))
+            ],
+          ),
+        )),
       ]),
     );
   }

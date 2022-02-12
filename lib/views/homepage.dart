@@ -32,11 +32,11 @@ class HomePage extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: const [
-                    Receive_Message(),
+                    Send_Message(),
                     SizedBox(
                       width: 20,
                     ),
-                    Send_Message(),
+                    Receive_Message()
                   ],
                 ),
                 // Row(
