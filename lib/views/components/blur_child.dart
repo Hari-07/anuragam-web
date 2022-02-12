@@ -17,6 +17,7 @@ class BlurChild extends StatelessWidget {
     return ClipRRect(
       borderRadius: BorderRadius.circular(25),
       child: Container(
+        color: Colors.black.withOpacity(0.4),
         padding: padding,
         child: BackdropFilter(
           child: child,
