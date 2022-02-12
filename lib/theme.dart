@@ -13,8 +13,8 @@ ThemeData anuragamTheme = ThemeData(
   textTheme: GoogleFonts.arapeyTextTheme(),
   inputDecorationTheme: InputDecorationTheme(
     border: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(12),
-    ),
+        borderRadius: BorderRadius.circular(12),
+        borderSide: BorderSide(color: Colors.white)),
     hintStyle: const TextStyle(color: Colors.white),
   ),
 );

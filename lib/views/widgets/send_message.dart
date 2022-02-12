@@ -72,13 +72,33 @@ class _SendMessageState extends State<SendMessage> {
     //   ]),
     // );
     return SizedBox(
-      width: 100,
+      width: 357,
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
           Container(
+            height: 100,
+            child: Row(
+              children: const [
+                Text(
+                  'A egestas quam etiam dui leo, nisi sit fames feugiat. Nisi, sit feugiat purus, integer aenean tortor orci.',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 18,
+                    color: Colors.white,
+                  ),
+                ),
+                Image(image: AssetImage('assets/sendmsg')),
+              ],
+            ),
+          ),
+          Container(
             height: 50,
             child: TextFormField(
+              decoration: const InputDecoration(
+                  labelText: 'Reach me at',
+                  border: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.white))),
               onChanged: (value) {
                 setState(() {
                   _submission.contact = value;
@@ -90,13 +110,19 @@ class _SendMessageState extends State<SendMessage> {
           Container(
             height: 50,
             child: TextFormField(
+              decoration: const InputDecoration(
+                labelText: 'Message',
+              ),
               onChanged: ((value) {
                 _submission.message = value;
               }),
             ),
           ),
-          TextButton(
-            child: Text('Send'),
+          const SizedBox(
+            height: 30,
+          ),
+          ElevatedButton(
+            child: const Text('Send'),
             onPressed: () async {
               await SubmissionInterface.addSubmission(_submission);
             },
@@ -106,3 +132,8 @@ class _SendMessageState extends State<SendMessage> {
     );
   }
 }
+
+// labelText: 'Enter something',
+//                 enabledBorder: OutlineInputBorder(
+//                   borderSide: const BorderSide(width: 3, color: Colors.blue),
+//                   borderRadius: BorderRadius.circular(15),
