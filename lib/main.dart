@@ -18,24 +18,23 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      routeInformationParser: _router.routeInformationParser,
-      routerDelegate: _router.routerDelegate,
-      theme: ThemeData(
-          elevatedButtonTheme: ElevatedButtonThemeData(
-              style: ButtonStyle(
-                  elevation: MaterialStateProperty.all(5),
-                  backgroundColor: MaterialStateProperty.all(
-                      const Color.fromARGB(255, 255, 147, 152)),
-                  shadowColor: MaterialStateProperty.all(Colors.pinkAccent))),
-          scaffoldBackgroundColor: const Color.fromARGB(255, 247, 243, 244),
-          textTheme: GoogleFonts.loveYaLikeASisterTextTheme(
-              Theme.of(context).textTheme),
-          inputDecorationTheme: InputDecorationTheme(
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(5),
-            ),
-            hintStyle: TextStyle(color: Colors.white),
-          )),
-    );
+        routeInformationParser: _router.routeInformationParser,
+        routerDelegate: _router.routerDelegate,
+        theme: ThemeData(
+            elevatedButtonTheme: ElevatedButtonThemeData(
+                style: ButtonStyle(
+                    elevation: MaterialStateProperty.all(5),
+                    backgroundColor: MaterialStateProperty.all(
+                        const Color.fromARGB(255, 255, 147, 152)),
+                    shadowColor: MaterialStateProperty.all(Colors.pinkAccent))),
+            scaffoldBackgroundColor: const Color.fromARGB(255, 247, 243, 244),
+            primarySwatch: Colors.pink,
+            textTheme: GoogleFonts.arapeyTextTheme(Theme.of(context).textTheme),
+            inputDecorationTheme: InputDecorationTheme(
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(12),
+              ),
+              hintStyle: const TextStyle(color: Colors.white),
+            )));
   }
 }

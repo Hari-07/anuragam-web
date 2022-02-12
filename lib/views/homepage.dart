@@ -1,3 +1,4 @@
+import 'package:anuragam_website/views/widgets/hometop.dart';
 import 'package:anuragam_website/views/widgets/receive_field.dart';
 import 'package:anuragam_website/views/widgets/send_message.dart';
 import 'package:anuragam_website/views/widgets/timer.dart';
@@ -9,53 +10,44 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: const BoxDecoration(
-          image: DecorationImage(
-              image: AssetImage('assets/anuragm.jpg'), fit: BoxFit.cover)),
-      child: Scaffold(
-        backgroundColor: Colors.transparent,
-        body: SingleChildScrollView(
-          child: Center(
-            child: Column(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(0, 20, 0, 20),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [Timer()],
-                  ),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                Row(
+    return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 189, 71, 71),
+      body: SingleChildScrollView(
+        child: Center(
+          child: Column(
+            children: [
+              const HomeTop(),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(0, 20, 0, 20),
+                child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
-                    Send_Message(),
-                    SizedBox(
-                      width: 20,
-                    ),
-                    Receive_Message()
-                  ],
+                  children: const [Timer()],
                 ),
-                const SizedBox(
-                  height: 20,
-                ),
-                Center(
-                  child: Column(
-                    // ignore: prefer_const_literals_to_create_immutables
-                    children: [
-                      const Text(
-                        'Music is an emotion',
-                        style: TextStyle(
-                          fontSize: 36,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ],
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: const [
+                  Receive_Message(),
+                  SizedBox(
+                    width: 20,
                   ),
-                )
+                  Send_Message(),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+
+
+
                 // Row(
                 //   mainAxisAlignment: MainAxisAlignment.center,
                 //   children: [
@@ -76,11 +68,3 @@ class HomePage extends StatelessWidget {
                 //     ),
                 //   ],
                 // ),
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-}
