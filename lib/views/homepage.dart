@@ -1,6 +1,8 @@
 import 'package:anuragam_website/views/widgets/banner_widget.dart';
+import 'package:anuragam_website/views/widgets/banner_widget.dart';
 import 'package:anuragam_website/views/widgets/message_section.dart';
 import 'package:anuragam_website/views/widgets/song_section.dart';
+import 'package:anuragam_website/views/widgets/title_widget.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -23,7 +25,8 @@ class HomePage extends StatelessWidget {
           child: Column(
             children: [
               BannerWidget(),
-              // TitleWidget(), //Heading and Substring
+              TitleWidget('Send Your lOVE Anonymously',
+                  'A egestas quam etiam dui leo, nisi sit fames feugiat. Nisi, sit feugiat purus, integer aenean tortor orci.'), //Heading and Substring
               Container(
                 // TODO:TEMPORARY FOR VISIBILITY
                 color: Colors.white,

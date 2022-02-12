@@ -32,15 +32,15 @@ class BannerWidget extends StatelessWidget {
       // ignore: prefer_const_literals_to_create_immutables
       child: Center(
         child: Container(
-          width: 500,
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: const [
               Text(
                 'ANURAGAM',
                 style: TextStyle(
-                  letterSpacing: 5,
-                  fontSize: 50,
+                  fontWeight: FontWeight.w400,
+                  letterSpacing: 10,
+                  fontSize: 103,
                   color: Colors.white,
                 ),
               ),
