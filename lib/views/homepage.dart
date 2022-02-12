@@ -1,3 +1,4 @@
+import 'package:anuragam_website/views/widgets/banner_widget.dart';
 import 'package:anuragam_website/views/widgets/message_section.dart';
 import 'package:anuragam_website/views/widgets/song_section.dart';
 import 'package:flutter/material.dart';
@@ -21,7 +22,7 @@ class HomePage extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              // BannerWidget(),
+              BannerWidget(),
               // TitleWidget(), //Heading and Substring
               Container(
                 // TODO:TEMPORARY FOR VISIBILITY

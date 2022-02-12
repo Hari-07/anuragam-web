@@ -22,7 +22,7 @@ class Timer extends StatelessWidget {
   Widget build(BuildContext context) {
     return SlideCountdownSeparated(
       separator: '',
-      duration: DateTime(2022, 2).difference(DateTime.now()),
+      duration: DateTime(2022, 2, 14).difference(DateTime.now()),
       height: 96.52,
       width: 79.7,
       showZeroValue: true,
