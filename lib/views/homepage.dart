@@ -1,9 +1,6 @@
-import 'package:anuragam_website/views/widgets/hometop.dart';
-import 'package:anuragam_website/views/widgets/receive_field.dart';
-import 'package:anuragam_website/views/widgets/send_message.dart';
-import 'package:anuragam_website/views/widgets/timer.dart';
+import 'package:anuragam_website/views/widgets/message_section.dart';
+import 'package:anuragam_website/views/widgets/song_section.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -11,32 +8,36 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 189, 71, 71),
-      body: SingleChildScrollView(
-        child: Center(
+      body: Container(
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/bg.png'),
+            fit: BoxFit.fill,
+          ),
+        ),
+        padding: const EdgeInsets.all(20),
+        child: SingleChildScrollView(
           child: Column(
             children: [
-              const HomeTop(),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(0, 20, 0, 20),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [Timer()],
-                ),
+              // BannerWidget(),
+              // TitleWidget(), //Heading and Substring
+              Container(
+                // TODO:TEMPORARY FOR VISIBILITY
+                color: Colors.white,
+                height: 200,
+                child: MessageSection(),
               ),
-              const SizedBox(
-                height: 20,
+              // TitleWidget(), //Heading and Substring
+              Container(
+                // TODO:TEMPORARY FOR VISIBILITY
+                color: Colors.white,
+                height: 200,
+                child: SongSection(),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
-                  Receive_Message(),
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Send_Message(),
-                ],
-              ),
+              // SongSection(),
+              // TitleWidget(), //Heading and Substring
             ],
           ),
         ),
@@ -44,8 +45,6 @@ class HomePage extends StatelessWidget {
     );
   }
 }
-
-
 
 
                 // Row(

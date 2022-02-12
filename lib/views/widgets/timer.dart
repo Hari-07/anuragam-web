@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_countdown_timer/current_remaining_time.dart';
-import 'package:flutter_countdown_timer/flutter_countdown_timer.dart';
 import 'package:slide_countdown/slide_countdown.dart';
 
 // int endtime = DateTime.now().microsecondsSinceEpoch + 1000 * 30;
@@ -22,15 +20,15 @@ class Timer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SlideCountdownSeparated(
+    return SlideCountdownSeparated(
       separator: '',
-      duration: Duration(minutes: 61),
+      duration: DateTime(2022, 2).difference(DateTime.now()),
       height: 96.52,
       width: 79.7,
       showZeroValue: true,
-      textStyle: TextStyle(fontSize: 52, color: Colors.white),
+      textStyle: const TextStyle(fontSize: 52, color: Colors.white),
       slideDirection: SlideDirection.up,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: Colors.transparent,
         // borderRadius: BorderRadius.all(Radius.circular(7)),
         // boxShadow: [

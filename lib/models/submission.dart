@@ -4,16 +4,16 @@ part 'submission.g.dart';
 
 @JsonSerializable()
 class Submission {
-  late String name;
   late String message;
   late String contact;
 
-  Submission(
-      {required this.name, required this.message, required this.contact});
+  Submission({
+    required this.message,
+    required this.contact,
+  });
 
   factory Submission.empty() {
     return Submission(
-      name: '',
       message: '',
       contact: '',
     );
@@ -21,7 +21,7 @@ class Submission {
 
   @override
   String toString() {
-    return '$name, $message, $contact';
+    return '$message, $contact';
   }
 
   factory Submission.fromJson(Map<String, dynamic> json) =>
