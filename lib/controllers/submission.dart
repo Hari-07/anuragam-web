@@ -9,8 +9,8 @@ class SubmissionInterface {
     try {
       final collection = FirebaseFirestore.instance.collection('submissions');
       await collection.add(submission.toJson());
-    } on Exception {
-      print('Error Occured');
+    } on Exception catch(e){
+      print('Error Occured: $e');
     }
   }
 
@@ -18,8 +18,8 @@ class SubmissionInterface {
     try {
       final collection = FirebaseFirestore.instance.collection('songSubmissions');
       await collection.add(songSubmission.toJson());
-    } on Exception {
-      print('Error Occured');
+    } on Exception catch(e){
+      print('Error Occured: $e');
     }
   }
 
@@ -32,8 +32,8 @@ class SubmissionInterface {
         res = await collection.orderBy('randomValue', descending: true).startAt([randomIdentifier]).limit(1).get();
       }
       return Submission.fromJson(res.docs[0].data());
-    } on Exception {
-      print('Error Occured');
+    } on Exception catch(e){
+      print('Error Occured: $e');
       return Submission.empty();
     }
   }
@@ -47,8 +47,8 @@ class SubmissionInterface {
         res = await collection.orderBy('randomValue', descending: true).startAt([randomIdentifier]).limit(1).get();
       }
       return SongSubmission.fromJson(res.docs[0].data());
-    } on Exception {
-      print('Error Occured');
+    } on Exception catch (e){
+      print('Error Occured: $e');
       return SongSubmission.empty();
     }
   }

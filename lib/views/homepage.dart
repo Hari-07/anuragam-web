@@ -1,9 +1,6 @@
 import 'package:anuragam_website/views/widgets/banner_widget.dart';
-import 'package:anuragam_website/views/widgets/banner_widget.dart';
 import 'package:anuragam_website/views/widgets/message_section.dart';
-import 'package:anuragam_website/views/widgets/receive_field.dart';
 import 'package:anuragam_website/views/widgets/song_section.dart';
-import 'package:anuragam_website/views/widgets/title_widget.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -18,31 +15,19 @@ class HomePage extends StatelessWidget {
         decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage('assets/bg.png'),
-            fit: BoxFit.fill,
+            fit: BoxFit.cover,
           ),
         ),
         padding: const EdgeInsets.all(20),
         child: SingleChildScrollView(
           child: Column(
-            children: [
+            children: const [
               BannerWidget(),
-              TitleWidget('Send Your lOVE Anonymously',
-                  'A egestas quam etiam dui leo, nisi sit fames feugiat. Nisi, sit feugiat purus, integer aenean tortor orci.'), //Heading and Substring
-              Container(
-                // TODO:TEMPORARY FOR VISIBILITY
-                color: Colors.white,
-                height: 200,
-                child: MessageSection(),
-              ),
-              ReceiveMessage(title: 'Receive'),
-              // TitleWidget(), //Heading and Substring
-              Container(
-                // TODO:TEMPORARY FOR VISIBILITY
-                height: 250,
-                child: SongSection(),
-              ),
-              // SongSection(),
-              // TitleWidget(), //Heading and Substring
+              SizedBox(height: 100,),
+              MessageSection(),
+              SizedBox(height: 100,),
+              SongSection(),
+              SizedBox(height: 50,),
             ],
           ),
         ),

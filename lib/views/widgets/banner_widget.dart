@@ -1,3 +1,4 @@
+import 'package:anuragam_website/views/components/blur_child.dart';
 import 'package:anuragam_website/views/widgets/timer.dart';
 import 'package:flutter/material.dart';
 import 'package:glassmorphism/glassmorphism.dart';
@@ -7,45 +8,26 @@ class BannerWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GlassmorphicContainer(
-      width: 1049,
-      height: 738.31,
-      borderRadius: 20,
-      blur: 2,
-      border: .5,
-      borderGradient: LinearGradient(
-        begin: Alignment.topLeft,
-        end: Alignment.bottomRight,
-        colors: [
-          const Color(0xFFffffff).withOpacity(0.2),
-          const Color((0xFFFFFFFF)).withOpacity(0.2),
-        ],
-      ),
-      linearGradient: LinearGradient(
-        begin: Alignment.topLeft,
-        end: Alignment.bottomRight,
-        colors: [
-          Color.fromARGB(255, 10, 10, 10).withOpacity(0.15),
-          Color.fromARGB(255, 0, 0, 0).withOpacity(0.15),
-        ],
-      ),
-      // ignore: prefer_const_literals_to_create_immutables
-      child: Center(
-        child: Container(
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: const [
-              Text(
-                'ANURAGAM',
-                style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  letterSpacing: 10,
-                  fontSize: 103,
-                  color: Colors.white,
+    return BlurChild(
+      child: SizedBox(
+        width: 800,
+        child: Center(
+          child: Container(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: const [
+                Text(
+                  'ANURAGAM',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w400,
+                    letterSpacing: 10,
+                    fontSize: 103,
+                    color: Colors.white,
+                  ),
                 ),
-              ),
-              Timer(),
-            ],
+                Timer(),
+              ],
+            ),
           ),
         ),
       ),

@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 class BlurChild extends StatelessWidget {
   const BlurChild({
     Key? key,
-    this.padding = const EdgeInsets.all(20),
+    this.padding = const EdgeInsets.all(40),
     required this.child,
   }) : super(key: key);
 
@@ -20,8 +20,8 @@ class BlurChild extends StatelessWidget {
         child: BackdropFilter(
           child: child,
           filter: ImageFilter.blur(
-            sigmaX: 5,
-            sigmaY: 5,
+            sigmaX: 10,
+            sigmaY: 10,
           ),
         ),
       ),
