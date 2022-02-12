@@ -16,8 +16,8 @@ class Receive_Message extends StatelessWidget {
               title: Text('Name'),
             ));
     return GlassmorphicContainer(
-      width: 450,
-      height: 600,
+      width: 400,
+      height: 400,
       borderRadius: 20,
       blur: 10,
       border: .5,

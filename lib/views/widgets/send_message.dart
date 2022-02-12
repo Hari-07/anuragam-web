@@ -8,8 +8,8 @@ class Send_Message extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GlassmorphicContainer(
-      width: 450,
-      height: 600,
+      width: 400,
+      height: 400,
       borderRadius: 20,
       blur: 10,
       border: .5,
@@ -44,10 +44,11 @@ class Send_Message extends StatelessWidget {
             child: Form(
                 child: Column(
               children: [
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(30, 10, 30, 0),
+                Container(
+                  height: 40,
+                  width: 200,
                   child: TextFormField(
-                    decoration: InputDecoration(labelText: 'Name'),
+                    decoration: const InputDecoration(hintText: 'Name'),
                   ),
                 )
               ],
