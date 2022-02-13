@@ -9,11 +9,13 @@ class Submission {
   late String message;
   late String contact;
   late double randomValue;
+  late int confirm;
 
   Submission({
     required this.message,
     required this.contact,
     required this.randomValue,
+    required this.confirm,
   });
 
   factory Submission.empty() {
@@ -21,7 +23,12 @@ class Submission {
       message: '',
       contact: '',
       randomValue: Random().nextDouble(),
+      confirm: 1,
     );
+  }
+
+  bool isValid(){
+    return message.isNotEmpty && contact.isNotEmpty;
   }
 
   @override

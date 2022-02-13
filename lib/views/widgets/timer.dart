@@ -14,7 +14,7 @@ class Timer extends StatelessWidget {
       ),
       duration: DateTime(2022, 2, 14, 18).difference(DateTime.now()),
       height: 96,
-      width: 80,
+      width: 100,
       showZeroValue: true,
       textStyle: TextStyle(
         fontSize: 80,

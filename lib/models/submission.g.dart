@@ -10,6 +10,7 @@ Submission _$SubmissionFromJson(Map<String, dynamic> json) => Submission(
       message: json['message'] as String,
       contact: json['contact'] as String,
       randomValue: (json['randomValue'] as num).toDouble(),
+      confirm: json['confirm'] as int,
     );
 
 Map<String, dynamic> _$SubmissionToJson(Submission instance) =>
@@ -17,4 +18,5 @@ Map<String, dynamic> _$SubmissionToJson(Submission instance) =>
       'message': instance.message,
       'contact': instance.contact,
       'randomValue': instance.randomValue,
+      'confirm': instance.confirm,
     };

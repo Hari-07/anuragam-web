@@ -23,11 +23,11 @@ class MessageSection extends StatelessWidget {
           ...[
             SizedBox(
               height: 350,
-              width: 900,
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisSize: MainAxisSize.min,
                 children: const [
                   SendMessage(),
+                  SizedBox(width: 100),
                   ReceiveMessage(),
                 ],
               ),
