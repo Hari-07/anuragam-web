@@ -4,6 +4,7 @@ import 'package:anuragam_website/views/components/section_header.dart';
 import 'package:anuragam_website/views/future_self/future_img.dart';
 import 'package:anuragam_website/views/future_self/send_future.dart';
 import 'package:anuragam_website/views/widgets/social_media_links.dart';
+import 'package:anuragam_website/views/widgets/social_section.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -46,6 +47,10 @@ class FutureSection extends StatelessWidget {
             const SizedBox(
               height: 100,
             ),
+            const SizedBox(height: 10, child: SocialSection()),
+            const SizedBox(
+              height: 100,
+            ),
           ]
         } else ...{
           ...[
@@ -55,8 +60,12 @@ class FutureSection extends StatelessWidget {
                 horizontal: 20,
               ),
               height: 200,
-              child: FutureMessage(),
+              child: const FutureMessage(),
             ),
+            const SizedBox(
+              height: 100,
+            ),
+            const SizedBox(height: 10, child: SocialSection()),
             const SizedBox(
               height: 100,
             ),
