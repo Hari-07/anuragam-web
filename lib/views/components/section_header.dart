@@ -19,14 +19,15 @@ class SectionHeader extends StatelessWidget {
           title,
           style: const TextStyle(
             color: Colors.white,
-            fontSize: 36,
+            fontSize: 40,
+            fontWeight: FontWeight.bold
           ),
         ),
         Text(
           subtext,
           style: const TextStyle(
             color: Colors.white,
-            fontSize: 24,
+            fontSize: 20,
           ),
         ),
       ],
