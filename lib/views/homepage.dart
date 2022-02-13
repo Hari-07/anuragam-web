@@ -1,4 +1,5 @@
 import 'package:anuragam_website/views/widgets/banner_widget.dart';
+import 'package:anuragam_website/views/widgets/events_section.dart';
 import 'package:anuragam_website/views/widgets/future_section.dart';
 import 'package:anuragam_website/views/widgets/message_section.dart';
 import 'package:anuragam_website/views/widgets/song_section.dart';
@@ -15,6 +16,10 @@ class HomePage extends StatelessWidget {
         child: Column(
           children: const [
             BannerWidget(),
+            SizedBox(
+              height: 100,
+            ),
+            EventsSection(),
             SizedBox(
               height: 100,
             ),
