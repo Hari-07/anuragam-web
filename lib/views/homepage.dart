@@ -1,5 +1,6 @@
 import 'package:anuragam_website/views/widgets/banner_widget.dart';
 import 'package:anuragam_website/views/widgets/message_section.dart';
+import 'package:anuragam_website/views/widgets/social_media_links.dart';
 import 'package:anuragam_website/views/widgets/song_section.dart';
 import 'package:flutter/material.dart';
 
@@ -20,13 +21,34 @@ class HomePage extends StatelessWidget {
         ),
         child: SingleChildScrollView(
           child: Column(
-            children: const [
-              BannerWidget(),
-              SizedBox(height: 100,),
-              MessageSection(),
-              SizedBox(height: 100,),
-              SongSection(),
-              SizedBox(height: 50,),
+            children: [
+              const BannerWidget(),
+              const SizedBox(
+                height: 100,
+              ),
+              const MessageSection(),
+              const SizedBox(
+                height: 100,
+              ),
+              const SongSection(),
+              const SizedBox(
+                height: 100,
+              ),
+              // SocialMedia(
+              //     title: 'Youtube',
+              //     subtitle:
+              //         'Mattis euismod mattis viverra fusce vestibulum duis. Auctor vel pretium egestas ut et eu dictum. In sed pulvinar interdum suspendisse. Porta nec eget ut blandit est. Fusce volutpat enim ut sit at arcu amet. Aliquam arcu, molestie sit quis.Mattis euismod mattis viverra fusce vestibulum duis. Auctor vel pretium egestas ut et eu dictum. In sed pulvinar interdum suspendisse. Porta nec eget ut blandit est. Fusce volutpat enim ut sit at arcu amet. Aliquam arcu, molestie sit quis.',
+              //     isleft: true,
+              //     link: 'https://youtu.be/-fv1itUt1Cc'),
+              // const SizedBox(
+              //   height: 100,
+              // ),
+              // SocialMedia(
+              //     title: 'Instagram',
+              //     subtitle:
+              //         'Mattis euismod mattis viverra fusce vestibulum duis. Auctor vel pretium egestas ut et eu dictum. In sed pulvinar interdum suspendisse. Porta nec eget ut blandit est. Fusce volutpat enim ut sit at arcu amet. Aliquam arcu, molestie sit quis.Mattis euismod mattis viverra fusce vestibulum duis. Auctor vel pretium egestas ut et eu dictum. In sed pulvinar interdum suspendisse. Porta nec eget ut blandit est. Fusce volutpat enim ut sit at arcu amet. Aliquam arcu, molestie sit quis.',
+              //     isleft: false,
+              //     link: 'ab')
             ],
           ),
         ),
