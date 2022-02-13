@@ -9,54 +9,52 @@ class MessageSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlurChild(
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          const SectionHeader(
-            title: 'Share your love',
-            subtext: 'Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum',
-          ),
-          const SizedBox(
-            height: 40,
-          ),
-          if (MediaQuery.of(context).size.width > 768) ...{
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        const SectionHeader(
+          title: 'Share your love',
+          subtext: 'Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum',
+        ),
+        const SizedBox(
+          height: 40,
+        ),
+        if (MediaQuery.of(context).size.width > 768) ...{
+          ...[
+            SizedBox(
+              height: 350,
+              width: 900,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: const [
+                  SendMessage(),
+                  ReceiveMessage(),
+                ],
+              ),
+            ),
+          ]
+        } else
+          ...{
             ...[
-              SizedBox(
-                height: 350,
-                width: 900,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
-                    SendMessage(),
-                    ReceiveMessage(),
-                  ],
+              Container(
+                // width: 300,
+                margin: const EdgeInsets.symmetric(
+                  horizontal: 20,
                 ),
+                height: 400,
+                child: SendMessage(),
+              ),
+              const SizedBox(height: 25,),
+              Container(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 20,
+                ),
+                height: 400,
+                child: ReceiveMessage(),
               ),
             ]
-          } else
-            ...{
-              ...[
-                Container(
-                  // width: 300,
-                  margin: const EdgeInsets.symmetric(
-                    horizontal: 20,
-                  ),
-                  height: 400,
-                  child: SendMessage(),
-                ),
-                const SizedBox(height: 25,),
-                Container(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 20,
-                  ),
-                  height: 400,
-                  child: ReceiveMessage(),
-                ),
-              ]
-            }
-        ],
-      ),
+          }
+      ],
     );
   }
 }

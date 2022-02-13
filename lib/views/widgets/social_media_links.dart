@@ -1,94 +1,98 @@
 import 'package:anuragam_website/views/components/blur_child.dart';
-import 'package:anuragam_website/views/components/section_header.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class SocialMedia extends StatelessWidget {
-  // const SocialMedia({ Key? key }) : super(key: key);
   String title;
   String subtitle;
   bool isleft;
   String link;
-  SocialMedia(
-      {Key? key,
-      required this.title,
-      required this.subtitle,
-      required this.isleft,
-      required this.link})
-      : super(key: key);
+  SocialMedia({
+    Key? key,
+    required this.title,
+    required this.subtitle,
+    required this.isleft,
+    required this.link,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return BlurChild(
-      child: Row(
-        children: [
-          if (isleft) ...{
-            ...[
-              //TODO:Youtube link display
-              Expanded(child: Image.network(getYoutubeThumbnail(link))),
-              const SizedBox(width: 100),
-              Expanded(
-                flex: 2,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Text(
-                      title,
-                      style: const TextStyle(
-                        fontSize: 24,
-                        color: Colors.white,
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 15,
-                    ),
-                    Text(
-                      subtitle,
-                      style: const TextStyle(
-                        fontSize: 18,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ],
-                ),
+    return Row(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        if (isleft) ...{
+          ...[
+            //TODO:Youtube link display
+            Expanded(
+              // child: Image.network(
+              //   getYoutubeThumbnail(link),
+              // ),
+              child: Placeholder(),
+            ),
+            const SizedBox(width: 100),
+            Expanded(
+              flex: 2,
+              child: SocialDescription(
+                title: title,
+                subtitle: subtitle,
               ),
-            ]
-          } else ...{
-            ...[
-              Expanded(
-                flex: 2,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Text(
-                      title,
-                      style: const TextStyle(
-                        fontSize: 24,
-                        color: Colors.white,
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 15,
-                    ),
-                    Text(
-                      subtitle,
-                      style: const TextStyle(
-                        fontSize: 18,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ],
-                ),
+            ),
+          ]
+        } else ...{
+          ...[
+            Expanded(
+              flex: 2,
+              child: SocialDescription(title: title, subtitle: subtitle),
+            ),
+            const SizedBox(width: 100),
+            Expanded(
+              // child: Image.network(
+              //   getYoutubeThumbnail(link),
+              // ),
+              child: Container(
+                child: Placeholder(),
               ),
-              const SizedBox(width: 100),
-              //TODO:Instagram link display
-              Expanded(child: Image.network(getYoutubeThumbnail(link))),
-            ]
-          }
-        ],
-      ),
+            ),
+          ]
+        }
+      ],
+    );
+  }
+}
+
+class SocialDescription extends StatelessWidget {
+  const SocialDescription({
+    Key? key,
+    required this.title,
+    required this.subtitle,
+  }) : super(key: key);
+
+  final String title;
+  final String subtitle;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Text(
+          title,
+          style: const TextStyle(
+            fontSize: 24,
+            color: Colors.white,
+          ),
+        ),
+        const SizedBox(
+          height: 15,
+        ),
+        Text(
+          subtitle,
+          style: const TextStyle(
+            fontSize: 18,
+            color: Colors.white,
+          ),
+        ),
+      ],
     );
   }
 }

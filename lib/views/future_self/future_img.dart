@@ -7,7 +7,7 @@ class FutureImg extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: 300,
-      child: Expanded(child: Image.asset('assets/future.png')),
+      child: Image.asset('assets/future.png'),
     );
   }
 }
