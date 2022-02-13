@@ -49,7 +49,7 @@ class BannerWidget extends StatelessWidget {
           Positioned(
             bottom: 0,
             child: SizedBox(
-              width: 700,
+              width: MediaQuery.of(context).size.width > 768 ? MediaQuery.of(context).size.width/3 : 0.8 * MediaQuery.of(context).size.width,
               // height: 150,
               child: Image.asset('assets/banner_ill.png'),
             ),

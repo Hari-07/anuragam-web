@@ -48,7 +48,7 @@ class SongSection extends StatelessWidget {
               padding: const EdgeInsets.symmetric(
                 horizontal: 20,
               ),
-              height: 400,
+              height: 300,
               child: ReceiveSong(),
             ),
           ]

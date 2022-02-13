@@ -54,8 +54,14 @@ class FutureSection extends StatelessWidget {
               margin: const EdgeInsets.symmetric(
                 horizontal: 20,
               ),
-              height: 200,
+              height: 320,
               child: FutureMessage(),
+            ),
+            AnuragamButton(
+              onPressed: () async {
+                await launch('https://www.futureme.org/');
+              },
+              text: 'Send',
             ),
             const SizedBox(
               height: 100,

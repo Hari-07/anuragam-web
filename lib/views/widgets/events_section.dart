@@ -46,7 +46,7 @@ class EventsSection extends StatelessWidget {
                 EventContainer(
                   eventLink: 'https://forms.gle/wN3ALdwg95ZzATGi6',
                   poster: Image.asset(
-                    'assets/event_fool.png',
+                    'assets/event_blind.jpg',
                     fit: BoxFit.cover,
                   ),
                 ),
