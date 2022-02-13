@@ -69,23 +69,6 @@ class FutureSection extends StatelessWidget {
             // ),
           ]
         },
-        SocialMedia(
-          title: 'Youtube',
-          subtitle:
-              'Mattis euismod mattis viverra fusce vestibulum duis. Auctor vel pretium egestas ut et eu dictum. In sed pulvinar interdum suspendisse. Porta nec eget ut blandit est. Fusce volutpat enim ut sit at arcu amet. Aliquam arcu, molestie sit quis.Mattis euismod mattis viverra fusce vestibulum duis. Auctor vel pretium egestas ut et eu dictum. In sed pulvinar interdum suspendisse. Porta nec eget ut blandit est. Fusce volutpat enim ut sit at arcu amet. Aliquam arcu, molestie sit quis.',
-          isleft: true,
-          link: 'https://youtu.be/-fv1itUt1Cc',
-        ),
-        const SizedBox(
-          height: 100,
-        ),
-        SocialMedia(
-          title: 'Instagram',
-          subtitle:
-              'Mattis euismod mattis viverra fusce vestibulum duis. Auctor vel pretium egestas ut et eu dictum. In sed pulvinar interdum suspendisse. Porta nec eget ut blandit est. Fusce volutpat enim ut sit at arcu amet. Aliquam arcu, molestie sit quis.Mattis euismod mattis viverra fusce vestibulum duis. Auctor vel pretium egestas ut et eu dictum. In sed pulvinar interdum suspendisse. Porta nec eget ut blandit est. Fusce volutpat enim ut sit at arcu amet. Aliquam arcu, molestie sit quis.',
-          isleft: false,
-          link: 'ab',
-        ),
       ],
     );
   }
