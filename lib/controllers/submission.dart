@@ -27,9 +27,9 @@ class SubmissionInterface {
     try {
       final collection = FirebaseFirestore.instance.collection('submissions');
       final randomIdentifier = Random().nextDouble();
-      var res = await collection.orderBy('randomValue').startAt([randomIdentifier]).limit(1).get();
+      var res = await collection.where('confirm', isEqualTo: 1).orderBy('randomValue').startAt([randomIdentifier]).limit(1).get();
       if(res.size == 0) {
-        res = await collection.orderBy('randomValue', descending: true).startAt([randomIdentifier]).limit(1).get();
+        res = await collection.where('confirm', isEqualTo: 1).orderBy('randomValue', descending: true).startAt([randomIdentifier]).limit(1).get();
       }
       return Submission.fromJson(res.docs[0].data());
     } on Exception catch(e){
@@ -42,9 +42,9 @@ class SubmissionInterface {
     try {
       final collection = FirebaseFirestore.instance.collection('songSubmissions');
       final randomIdentifier = Random().nextDouble();
-      var res = await collection.orderBy('randomValue').startAt([randomIdentifier]).limit(1).get();
+      var res = await collection.where('confirm', isEqualTo: 1).orderBy('randomValue').startAt([randomIdentifier]).limit(1).get();
       if(res.size == 0) {
-        res = await collection.orderBy('randomValue', descending: true).startAt([randomIdentifier]).limit(1).get();
+        res = await collection.where('confirm', isEqualTo: 1).orderBy('randomValue', descending: true).startAt([randomIdentifier]).limit(1).get();
       }
       return SongSubmission.fromJson(res.docs[0].data());
     } on Exception catch (e){
