@@ -79,7 +79,15 @@ class _SendMessageState extends State<SendMessage> {
           const Spacer(),
           AnuragamButton(
             onPressed: () async {
-              await SubmissionInterface.addSubmission(_submission);
+              if (_submission.isValid()) {
+                await SubmissionInterface.addSubmission(_submission);
+              } else {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(
+                    content: Text('Please enter valid entries'),
+                  ),
+                );
+              }
             },
             text: 'Send',
           )

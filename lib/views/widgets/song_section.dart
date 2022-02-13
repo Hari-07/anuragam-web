@@ -22,11 +22,11 @@ class SongSection extends StatelessWidget {
         if (MediaQuery.of(context).size.width > 768) ...{
           SizedBox(
             height: 350,
-            width: 900,
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisSize: MainAxisSize.min,
               children: const [
                 SendSong(),
+                SizedBox(width: 100),
                 ReceiveSong(),
               ],
             ),

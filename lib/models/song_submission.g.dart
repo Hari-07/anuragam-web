@@ -10,10 +10,12 @@ SongSubmission _$SongSubmissionFromJson(Map<String, dynamic> json) =>
     SongSubmission(
       link: json['link'] as String,
       randomValue: (json['randomValue'] as num).toDouble(),
+      confirm: json['confirm'] as int,
     );
 
 Map<String, dynamic> _$SongSubmissionToJson(SongSubmission instance) =>
     <String, dynamic>{
       'link': instance.link,
       'randomValue': instance.randomValue,
+      'confirm': instance.confirm,
     };

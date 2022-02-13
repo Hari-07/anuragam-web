@@ -1,6 +1,7 @@
 import 'package:anuragam_website/views/components/custom_button.dart';
 
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class FutureMessage extends StatefulWidget {
   const FutureMessage({Key? key}) : super(key: key);
@@ -49,7 +50,9 @@ class _SendMessageState extends State<FutureMessage> {
           ),
           const Spacer(),
           AnuragamButton(
-            onPressed: () {},
+            onPressed: () async {
+              await launch('https://www.futureme.org/');
+            },
             text: 'Send',
           )
         ],
