@@ -29,6 +29,7 @@ class FutureSection extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: const [
                   FutureMessage(),
+                  SizedBox(width: 100),
                   FutureImg(),
                 ],
               ),

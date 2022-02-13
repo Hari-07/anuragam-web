@@ -75,6 +75,12 @@ class _SendSongState extends State<SendSong> {
             onPressed: () async {
               if (_songSubmission.isValid()) {
                 await SubmissionInterface.addSongSubmission(_songSubmission);
+              } else {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(
+                    content: Text('Please enter valid entries'),
+                  ),
+                );
               }
             },
             text: 'Send',

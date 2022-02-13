@@ -1,6 +1,7 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class EventsSection extends StatelessWidget {
   const EventsSection({Key? key}) : super(key: key);
@@ -28,9 +29,15 @@ class EventsSection extends StatelessWidget {
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: const [
-                EventContainer(),
-                EventContainer(),
-                EventContainer(),
+                EventContainer(
+                  eventLink: 'https://forms.gle/ioqKFDePuLZnkgp76',
+                ),
+                EventContainer(
+                  eventLink: 'https://forms.gle/4UrtyiQzMAipGQFi6',
+                ),
+                EventContainer(
+                  eventLink: 'https://forms.gle/wN3ALdwg95ZzATGi6',
+                ),
               ],
             ),
           ),
@@ -41,7 +48,12 @@ class EventsSection extends StatelessWidget {
 }
 
 class EventContainer extends StatelessWidget {
-  const EventContainer({Key? key}) : super(key: key);
+  const EventContainer({
+    Key? key,
+    required this.eventLink,
+  }) : super(key: key);
+
+  final String eventLink;
 
   @override
   Widget build(BuildContext context) {
@@ -57,30 +69,35 @@ class EventContainer extends StatelessWidget {
             width: 2,
           ),
         ),
-        child: Column(
-          children: [
-            Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(25),
-                border: Border.all(
-                  color: Color(0xFFAE3032),
-                  width: 1,
-                ),
-              ),
-              height: 250,
-              child: const Placeholder(),
-            ),
-            const Expanded(
-              child: Center(
-                child: AutoSizeText(
-                  'Register',
-                  style: TextStyle(
-                    fontSize: 20,
+        child: InkWell(
+          onTap: () async{
+            await(launch(eventLink));
+          },
+          child: Column(
+            children: [
+              Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(25),
+                  border: Border.all(
+                    color: Color(0xFFAE3032),
+                    width: 1,
                   ),
                 ),
+                height: 250,
+                child: const Placeholder(),
               ),
-            )
-          ],
+              const Expanded(
+                child: Center(
+                  child: AutoSizeText(
+                    'Register',
+                    style: TextStyle(
+                      fontSize: 20,
+                    ),
+                  ),
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );

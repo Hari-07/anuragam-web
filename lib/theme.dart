@@ -20,4 +20,7 @@ ThemeData anuragamTheme = ThemeData(
         borderSide: BorderSide(color: Color(0xFFAE3032))),
     hintStyle: const TextStyle(color: Color(0xFFAE3032)),
   ),
+  snackBarTheme: SnackBarThemeData(
+    behavior: SnackBarBehavior.floating,
+  )
 );
