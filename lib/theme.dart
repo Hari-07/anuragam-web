@@ -12,7 +12,7 @@ ThemeData anuragamTheme = ThemeData(
   // ),
   scaffoldBackgroundColor: const Color.fromARGB(255, 247, 243, 244),
   primarySwatch: Colors.pink,
-  textTheme: GoogleFonts.arapeyTextTheme()
+  textTheme: GoogleFonts.interTextTheme()
       .apply(bodyColor: Color(0xFFAE3032), displayColor: Color(0xFFAE3032)),
   inputDecorationTheme: InputDecorationTheme(
     border: OutlineInputBorder(

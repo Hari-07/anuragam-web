@@ -49,7 +49,7 @@ class _AnuragamButtonState extends State<AnuragamButton> {
       style: ButtonStyle(
           foregroundColor: MaterialStateProperty.all(Color(0xFFAE3032)),
           backgroundColor: MaterialStateProperty.all(const Color(0XFFAE3032)),
-          fixedSize: MaterialStateProperty.all(const Size(120, 40)),
+          minimumSize: MaterialStateProperty.all(const Size(150, 60)),
           padding: MaterialStateProperty.all(
               const EdgeInsets.symmetric(horizontal: 25, vertical: 15)),
           shape: MaterialStateProperty.all(

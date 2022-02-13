@@ -1,9 +1,11 @@
 import 'package:anuragam_website/views/components/blur_child.dart';
+import 'package:anuragam_website/views/components/custom_button.dart';
 import 'package:anuragam_website/views/components/section_header.dart';
 import 'package:anuragam_website/views/future_self/future_img.dart';
 import 'package:anuragam_website/views/future_self/send_future.dart';
 import 'package:anuragam_website/views/widgets/social_media_links.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class FutureSection extends StatelessWidget {
   const FutureSection({Key? key}) : super(key: key);
@@ -14,7 +16,7 @@ class FutureSection extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: [
         const SectionHeader(
-          title: 'Yourself',
+          title: 'Love Yourself',
           subtext: 'Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum',
         ),
         const SizedBox(
@@ -23,16 +25,23 @@ class FutureSection extends StatelessWidget {
         if (MediaQuery.of(context).size.width > 768) ...{
           ...[
             SizedBox(
-              height: 200,
+              height: 350,
               child: Row(
                 mainAxisSize: MainAxisSize.min,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: const [
                   FutureMessage(),
                   SizedBox(width: 100),
                   FutureImg(),
                 ],
               ),
+            ),
+            AnuragamButton(
+              onPressed: () async {
+                await launch('https://www.futureme.org/');
+              },
+              text: 'Send',
             ),
             const SizedBox(
               height: 100,

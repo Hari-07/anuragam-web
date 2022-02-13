@@ -1,6 +1,5 @@
 import 'package:anuragam_website/controllers/submission.dart';
 import 'package:anuragam_website/models/song_submission.dart';
-import 'package:anuragam_website/models/submission.dart';
 import 'package:anuragam_website/views/components/custom_button.dart';
 import 'package:anuragam_website/views/components/custom_textformfield.dart';
 import 'package:flutter/material.dart';
@@ -33,6 +32,7 @@ class _SendSongState extends State<SendSong> {
                       'Send Song',
                       style: TextStyle(
                         fontSize: 24,
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
                     SizedBox(

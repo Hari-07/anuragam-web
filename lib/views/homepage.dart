@@ -16,19 +16,19 @@ class HomePage extends StatelessWidget {
         children: const [
           BannerWidget(),
           SizedBox(
-            height: 100,
+            height: 130,
           ),
           EventsSection(),
           SizedBox(
-            height: 100,
+            height: 130,
           ),
           MessageSection(),
           SizedBox(
-            height: 100,
+            height: 130,
           ),
           SongSection(),
           SizedBox(
-            height: 100,
+            height: 130,
           ),
           FutureSection(),
         ],

@@ -35,7 +35,7 @@ class _SendMessageState extends State<FutureMessage> {
                       height: 15,
                     ),
                     Text(
-                      'A egestas quam etiam dui leo, nisi sit fames feugiat. Nisi, sit feugiat purus, integer aenean tortor orci.',
+                      'Self-love is the best love and who better to tell you that than yourself? Confused about what you just read? Well you might feel the same when you receive a letter from yourself some years down the line. Head over to future.me and write a letter to your future self. Truly a (email) blast from the past',
                       style: TextStyle(
                         fontSize: 18,
                       ),
@@ -48,13 +48,6 @@ class _SendMessageState extends State<FutureMessage> {
           const SizedBox(
             height: 5,
           ),
-          const Spacer(),
-          AnuragamButton(
-            onPressed: () async {
-              await launch('https://www.futureme.org/');
-            },
-            text: 'Send',
-          )
         ],
       ),
     );

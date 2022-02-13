@@ -22,12 +22,12 @@ class MessageSection extends StatelessWidget {
         if (MediaQuery.of(context).size.width > 768) ...{
           ...[
             SizedBox(
-              height: 450,
+              height: 550,
               child: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: const [
                   SendMessage(),
-                  SizedBox(width: 100),
+                  SizedBox(width: 250),
                   ReceiveMessage(),
                 ],
               ),
@@ -40,7 +40,7 @@ class MessageSection extends StatelessWidget {
               margin: const EdgeInsets.symmetric(
                 horizontal: 20,
               ),
-              height: 450,
+              height: 550,
               child: SendMessage(),
             ),
             const SizedBox(

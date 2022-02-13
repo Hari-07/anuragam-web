@@ -6,7 +6,7 @@ class FutureImg extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 120,
+      width: 150,
       child: Image.asset('assets/future.png'),
     );
   }

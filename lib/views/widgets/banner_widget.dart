@@ -1,4 +1,5 @@
 import 'package:anuragam_website/views/widgets/timer.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -12,43 +13,44 @@ class BannerWidget extends StatelessWidget {
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height,
       child: Stack(
-        alignment: Alignment.center,
+        alignment: Alignment.topCenter,
         children: [
           Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
-            children: [
-              Text(
+            children: const [
+              SizedBox(height: 150,),
+              AutoSizeText(
                 'Ragam Presents',
                 style: TextStyle(
-                  fontSize: 42,
+                  fontSize: 32,
                   color: Color(0xFFAE3032),
-                  fontFamily: GoogleFonts.singleDay().fontFamily,
                 ),
               ),
-              const SizedBox(
+              SizedBox(
                 height: 20,
               ),
-              Text(
+              AutoSizeText(
                 'ANURAGAM',
                 style: TextStyle(
                   fontWeight: FontWeight.w400,
-                  // letterSpacing: 10,
-                  fontSize: 103,
+                  fontSize: 35,
+                  letterSpacing: 30,
                   color: Color(0xFFAE3032),
-                  fontFamily: GoogleFonts.londrinaShadow().fontFamily,
                 ),
               ),
-              const SizedBox(
-                height: 20,
+              SizedBox(
+                height: 5,
               ),
-              const Timer(),
+              Timer(),
             ],
           ),
           Positioned(
             bottom: 0,
             child: SizedBox(
-              width: 300,
-              height: 150,
+              width: 700,
+              // height: 150,
               child: Image.asset('assets/banner_ill.png'),
             ),
           )
