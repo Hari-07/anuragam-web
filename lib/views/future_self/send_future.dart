@@ -1,20 +1,15 @@
-import 'package:anuragam_website/controllers/submission.dart';
-import 'package:anuragam_website/models/song_submission.dart';
-import 'package:anuragam_website/models/submission.dart';
 import 'package:anuragam_website/views/components/custom_button.dart';
-import 'package:anuragam_website/views/components/custom_textformfield.dart';
+
 import 'package:flutter/material.dart';
 
-class SendSong extends StatefulWidget {
-  const SendSong({Key? key}) : super(key: key);
+class FutureMessage extends StatefulWidget {
+  const FutureMessage({Key? key}) : super(key: key);
 
   @override
-  State<SendSong> createState() => _SendSongState();
+  State<FutureMessage> createState() => _SendMessageState();
 }
 
-class _SendSongState extends State<SendSong> {
-  SongSubmission _songSubmission = SongSubmission.empty();
-
+class _SendMessageState extends State<FutureMessage> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -30,7 +25,7 @@ class _SendSongState extends State<SendSong> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: const [
                     Text(
-                      'Send Song',
+                      'Recieve Future Message',
                       style: TextStyle(
                         fontSize: 24,
                       ),
@@ -47,36 +42,14 @@ class _SendSongState extends State<SendSong> {
                   ],
                 ),
               ),
-              const Expanded(
-                child: Image(
-                  image: AssetImage(
-                    'assets/sendsong.png',
-                  ),
-                ),
-              ),
             ],
           ),
           const SizedBox(
-            height: 25,
-          ),
-          AnuragamFormField(
-            onChanged: (value) {
-              setState(() {
-                _songSubmission.link = value;
-              });
-            },
-            label: 'Song link',
-          ),
-          const SizedBox(
-            height: 15,
+            height: 5,
           ),
           const Spacer(),
           AnuragamButton(
-            onPressed: () async {
-              if (_songSubmission.isValid()) {
-                await SubmissionInterface.addSongSubmission(_songSubmission);
-              }
-            },
+            onPressed: () {},
             text: 'Send',
           )
         ],

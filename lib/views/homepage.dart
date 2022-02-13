@@ -1,4 +1,6 @@
 import 'package:anuragam_website/views/widgets/banner_widget.dart';
+import 'package:anuragam_website/views/widgets/events_section.dart';
+import 'package:anuragam_website/views/widgets/future_section.dart';
 import 'package:anuragam_website/views/widgets/message_section.dart';
 import 'package:anuragam_website/views/widgets/song_section.dart';
 import 'package:flutter/material.dart';
@@ -9,50 +11,30 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        width: MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.height,
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/anuragm.jpg'),
-            fit: BoxFit.cover,
-          ),
-        ),
-        child: SingleChildScrollView(
-          child: Column(
-            children: const [
-              BannerWidget(),
-              SizedBox(height: 100,),
-              MessageSection(),
-              SizedBox(height: 100,),
-              SongSection(),
-              SizedBox(height: 50,),
-            ],
-          ),
+      backgroundColor: const Color(0xFFF8E3C8),
+      body: SingleChildScrollView(
+        child: Column(
+          children: const [
+            BannerWidget(),
+            SizedBox(
+              height: 100,
+            ),
+            EventsSection(),
+            SizedBox(
+              height: 100,
+            ),
+            MessageSection(),
+            SizedBox(
+              height: 100,
+            ),
+            SongSection(),
+            SizedBox(
+              height: 100,
+            ),
+            FutureSection(),
+          ],
         ),
       ),
     );
   }
 }
-
-
-                // Row(
-                //   mainAxisAlignment: MainAxisAlignment.center,
-                //   children: [
-                // ElevatedButton(
-                //   onPressed: () {
-                //     context.go('/receive');
-                //   },
-                //   child: const Text('Get Love'),
-                // ),
-                //     const SizedBox(
-                //       width: 20,
-                //     ),
-                //     ElevatedButton(
-                //       onPressed: () {
-                //         context.go('/give');
-                //       },
-                //       child: const Text('Send Love'),
-                //     ),
-                //   ],
-                // ),

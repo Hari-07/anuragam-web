@@ -32,7 +32,6 @@ class _SendMessageState extends State<SendMessage> {
                       'Send Message',
                       style: TextStyle(
                         fontSize: 24,
-                        color: Colors.white,
                       ),
                     ),
                     SizedBox(
@@ -42,7 +41,6 @@ class _SendMessageState extends State<SendMessage> {
                       'A egestas quam etiam dui leo, nisi sit fames feugiat. Nisi, sit feugiat purus, integer aenean tortor orci.',
                       style: TextStyle(
                         fontSize: 18,
-                        color: Colors.white,
                       ),
                     ),
                   ],
@@ -80,7 +78,7 @@ class _SendMessageState extends State<SendMessage> {
           ),
           const Spacer(),
           AnuragamButton(
-            onPressed: () async{
+            onPressed: () async {
               await SubmissionInterface.addSubmission(_submission);
             },
             text: 'Send',
