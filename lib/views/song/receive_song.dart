@@ -10,8 +10,8 @@ class ReceiveSong extends StatelessWidget {
   Widget build(BuildContext context) {
     return ReceiveTemplate(
       title: 'Receive Song',
-      text1: 'A egestas quam etiam dui leo, nisi sit fames feugiat. Nisi, sit feugiat purus, integer aenean tortor orci.',
-      text2: 'A egestas quam etiam dui leo, nisi sit fames feugiat. Nisi, sit feugiat purus, integer aenean tortor orci.A egestas quam etiam dui leo, nisi sit fames feugiat. Nisi, sit feugiat ....',
+      text1: 'Ran out of good songs to listen to?',
+      text2: 'Click on this button to receive a randomly curated and personal playlist/song that someone holds dear.',
       imagePath: 'assets/receive_song.png',
       onPressed: () async {
         final songSubmission = await SubmissionInterface.getSongSubmission();

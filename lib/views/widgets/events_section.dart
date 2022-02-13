@@ -28,15 +28,27 @@ class EventsSection extends StatelessWidget {
           child: Center(
             child: ListView(
               scrollDirection: Axis.horizontal,
-              children: const [
+              children: [
                 EventContainer(
                   eventLink: 'https://forms.gle/ioqKFDePuLZnkgp76',
+                  poster: Image.asset(
+                    'assets/event_fool.png',
+                    fit: BoxFit.cover,
+                  ),
                 ),
                 EventContainer(
                   eventLink: 'https://forms.gle/4UrtyiQzMAipGQFi6',
+                  poster: Image.asset(
+                    'assets/event_deja.png',
+                    fit: BoxFit.cover,
+                  ),
                 ),
                 EventContainer(
                   eventLink: 'https://forms.gle/wN3ALdwg95ZzATGi6',
+                  poster: Image.asset(
+                    'assets/event_fool.png',
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ],
             ),
@@ -51,9 +63,11 @@ class EventContainer extends StatelessWidget {
   const EventContainer({
     Key? key,
     required this.eventLink,
+    required this.poster,
   }) : super(key: key);
 
   final String eventLink;
+  final Image poster;
 
   @override
   Widget build(BuildContext context) {
@@ -70,21 +84,20 @@ class EventContainer extends StatelessWidget {
           ),
         ),
         child: InkWell(
-          onTap: () async{
-            await(launch(eventLink));
+          onTap: () async {
+            await (launch(eventLink));
           },
           child: Column(
             children: [
               Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(25),
-                  border: Border.all(
-                    color: Color(0xFFAE3032),
-                    width: 1,
-                  ),
                 ),
                 height: 250,
-                child: const Placeholder(),
+                child: ClipRRect(
+                  child: poster,
+                  borderRadius: BorderRadius.circular(25),
+                ),
               ),
               const Expanded(
                 child: Center(

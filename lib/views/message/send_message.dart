@@ -32,13 +32,14 @@ class _SendMessageState extends State<SendMessage> {
                       'Send Message',
                       style: TextStyle(
                         fontSize: 24,
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
                     SizedBox(
                       height: 15,
                     ),
                     Text(
-                      'A egestas quam etiam dui leo, nisi sit fames feugiat. Nisi, sit feugiat purus, integer aenean tortor orci.',
+                      'This Valentine\'s, spread love not covid. Write a wholesome and heartwarming message for a stranger and make their day. You can choose to stay anonymous or drop in your name and contact to let them know that you thought about them ;)',
                       style: TextStyle(
                         fontSize: 18,
                       ),

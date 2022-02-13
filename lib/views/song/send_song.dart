@@ -39,7 +39,7 @@ class _SendSongState extends State<SendSong> {
                       height: 15,
                     ),
                     Text(
-                      'A egestas quam etiam dui leo, nisi sit fames feugiat. Nisi, sit feugiat purus, integer aenean tortor orci.',
+                      'Is introducing someone to good music your love language? Share your favourite song/playlist with a stranger today and make their heart, beat to your tunes. ',
                       style: TextStyle(
                         fontSize: 18,
                       ),
