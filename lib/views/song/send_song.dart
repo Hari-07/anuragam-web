@@ -33,7 +33,6 @@ class _SendSongState extends State<SendSong> {
                       'Send Song',
                       style: TextStyle(
                         fontSize: 24,
-                        color: Colors.white,
                       ),
                     ),
                     SizedBox(
@@ -43,7 +42,6 @@ class _SendSongState extends State<SendSong> {
                       'A egestas quam etiam dui leo, nisi sit fames feugiat. Nisi, sit feugiat purus, integer aenean tortor orci.',
                       style: TextStyle(
                         fontSize: 18,
-                        color: Colors.white,
                       ),
                     ),
                   ],

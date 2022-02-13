@@ -33,27 +33,28 @@ class MessageSection extends StatelessWidget {
               ),
             ),
           ]
-        } else
-          ...{
-            ...[
-              Container(
-                // width: 300,
-                margin: const EdgeInsets.symmetric(
-                  horizontal: 20,
-                ),
-                height: 400,
-                child: SendMessage(),
+        } else ...{
+          ...[
+            Container(
+              // width: 300,
+              margin: const EdgeInsets.symmetric(
+                horizontal: 20,
               ),
-              const SizedBox(height: 25,),
-              Container(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 20,
-                ),
-                height: 400,
-                child: ReceiveMessage(),
+              height: 400,
+              child: SendMessage(),
+            ),
+            const SizedBox(
+              height: 100,
+            ),
+            Container(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 20,
               ),
-            ]
-          }
+              height: 400,
+              child: ReceiveMessage(),
+            ),
+          ]
+        }
       ],
     );
   }

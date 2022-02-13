@@ -37,7 +37,6 @@ class ReceiveTemplate extends StatelessWidget {
                       title,
                       style: const TextStyle(
                         fontSize: 24,
-                        color: Colors.white,
                       ),
                     ),
                     const SizedBox(
@@ -47,7 +46,6 @@ class ReceiveTemplate extends StatelessWidget {
                       text1,
                       style: const TextStyle(
                         fontSize: 18,
-                        color: Colors.white,
                       ),
                     ),
                   ],
@@ -63,7 +61,6 @@ class ReceiveTemplate extends StatelessWidget {
             text2,
             style: const TextStyle(
               fontSize: 18,
-              color: Colors.white,
             ),
           ),
           const Spacer(),

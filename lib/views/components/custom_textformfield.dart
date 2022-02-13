@@ -18,25 +18,25 @@ class AnuragamFormField extends StatelessWidget {
         onChanged: onChanged,
         decoration: InputDecoration(
           hintText: label,
-          hintStyle:  TextStyle(
+          hintStyle: const TextStyle(
             fontSize: 18,
-            color: Colors.white.withOpacity(0.6),
+            color: Color(0xFFAE3032),
           ),
           focusedBorder: OutlineInputBorder(
             borderSide: const BorderSide(
-              color: Colors.pink,
+              color: Color(0xFFAE3032),
             ),
             borderRadius: BorderRadius.circular(12),
           ),
           enabledBorder: OutlineInputBorder(
             borderSide: const BorderSide(
-              color: Colors.white,
+              color: Color(0xFFAE3032),
             ),
             borderRadius: BorderRadius.circular(12),
           ),
         ),
         style: const TextStyle(
-          color: Colors.white,
+          color: Color(0xFFAE3032),
           fontSize: 18,
         ),
       ),

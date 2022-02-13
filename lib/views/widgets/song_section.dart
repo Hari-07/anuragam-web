@@ -34,21 +34,23 @@ class SongSection extends StatelessWidget {
         } else ...{
           ...[
             Container(
-                // width: 300,
-                margin: const EdgeInsets.symmetric(
-                  horizontal: 20,
-                ),
-                height: 400,
-                child: SendSong(),
+              // width: 300,
+              margin: const EdgeInsets.symmetric(
+                horizontal: 20,
               ),
-              const SizedBox(height: 25,),
-              Container(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 20,
-                ),
-                height: 400,
-                child: ReceiveSong(),
+              height: 400,
+              child: SendSong(),
+            ),
+            const SizedBox(
+              height: 100,
+            ),
+            Container(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 20,
               ),
+              height: 400,
+              child: ReceiveSong(),
+            ),
           ]
         }
       ],

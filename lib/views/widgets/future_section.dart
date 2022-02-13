@@ -33,6 +33,9 @@ class FutureSection extends StatelessWidget {
                 ],
               ),
             ),
+            const SizedBox(
+              height: 100,
+            ),
           ]
         } else ...{
           ...[
@@ -41,19 +44,19 @@ class FutureSection extends StatelessWidget {
               margin: const EdgeInsets.symmetric(
                 horizontal: 20,
               ),
-              height: 400,
+              height: 200,
               child: FutureMessage(),
             ),
             const SizedBox(
-              height: 25,
+              height: 100,
             ),
-            Container(
-              padding: const EdgeInsets.symmetric(
-                horizontal: 20,
-              ),
-              height: 400,
-              child: FutureImg(),
-            ),
+            // Container(
+            //   padding: const EdgeInsets.symmetric(
+            //     horizontal: 20,
+            //   ),
+            //   height: 200,
+            //   // child: FutureImg(),
+            // ),
           ]
         },
         SocialMedia(

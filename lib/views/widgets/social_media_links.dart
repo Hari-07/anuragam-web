@@ -16,46 +16,68 @@ class SocialMedia extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        if (isleft) ...{
-          ...[
-            //TODO:Youtube link display
-            Expanded(
-              // child: Image.network(
-              //   getYoutubeThumbnail(link),
-              // ),
-              child: Placeholder(),
+    if (MediaQuery.of(context).size.width > 768) {
+      return SizedBox(
+        width: 900,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            if (isleft) ...{
+              ...[
+                //TODO:Youtube link display
+                const Expanded(
+                  // child: Image.network(
+                  //   getYoutubeThumbnail(link),
+                  // ),
+                  child: Placeholder(),
+                ),
+                const SizedBox(width: 100),
+                Expanded(
+                  flex: 2,
+                  child: SocialDescription(
+                    title: title,
+                    subtitle: subtitle,
+                  ),
+                ),
+              ]
+            } else ...{
+              ...[
+                Expanded(
+                  flex: 2,
+                  child: SocialDescription(title: title, subtitle: subtitle),
+                ),
+                const SizedBox(width: 100),
+                Expanded(
+                  // child: Image.network(
+                  //   getYoutubeThumbnail(link),
+                  // ),
+                  child: Container(
+                    child: Placeholder(),
+                  ),
+                ),
+              ]
+            }
+          ],
+        ),
+      );
+    } else {
+      return Container(
+        margin: const EdgeInsets.symmetric(
+          horizontal: 40,
+        ),
+        height: 600,
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            SocialDescription(title: title, subtitle: ''),
+            const SizedBox(
+              height: 100,
             ),
-            const SizedBox(width: 100),
-            Expanded(
-              flex: 2,
-              child: SocialDescription(
-                title: title,
-                subtitle: subtitle,
-              ),
-            ),
-          ]
-        } else ...{
-          ...[
-            Expanded(
-              flex: 2,
-              child: SocialDescription(title: title, subtitle: subtitle),
-            ),
-            const SizedBox(width: 100),
-            Expanded(
-              // child: Image.network(
-              //   getYoutubeThumbnail(link),
-              // ),
-              child: Container(
-                child: Placeholder(),
-              ),
-            ),
-          ]
-        }
-      ],
-    );
+            const Placeholder(),
+          ],
+        ),
+      );
+    }
   }
 }
 
@@ -79,7 +101,6 @@ class SocialDescription extends StatelessWidget {
           title,
           style: const TextStyle(
             fontSize: 24,
-            color: Colors.white,
           ),
         ),
         const SizedBox(
@@ -89,7 +110,6 @@ class SocialDescription extends StatelessWidget {
           subtitle,
           style: const TextStyle(
             fontSize: 18,
-            color: Colors.white,
           ),
         ),
       ],
