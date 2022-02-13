@@ -12,28 +12,26 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFFF8E3C8),
-      body: SingleChildScrollView(
-        child: Column(
-          children: const [
-            BannerWidget(),
-            SizedBox(
-              height: 100,
-            ),
-            EventsSection(),
-            SizedBox(
-              height: 100,
-            ),
-            MessageSection(),
-            SizedBox(
-              height: 100,
-            ),
-            SongSection(),
-            SizedBox(
-              height: 100,
-            ),
-            FutureSection(),
-          ],
-        ),
+      body: ListView(
+        children: const [
+          BannerWidget(),
+          SizedBox(
+            height: 100,
+          ),
+          EventsSection(),
+          SizedBox(
+            height: 100,
+          ),
+          MessageSection(),
+          SizedBox(
+            height: 100,
+          ),
+          SongSection(),
+          SizedBox(
+            height: 100,
+          ),
+          FutureSection(),
+        ],
       ),
     );
   }
