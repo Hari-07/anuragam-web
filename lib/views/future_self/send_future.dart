@@ -26,10 +26,11 @@ class _SendMessageState extends State<FutureMessage> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: const [
                     Text(
-                      'Recieve Future Message',
+                      'Receive a Message in the Future',
                       style: TextStyle(
                         fontSize: 24,
                       ),
+                      maxLines: 2,
                     ),
                     SizedBox(
                       height: 15,
