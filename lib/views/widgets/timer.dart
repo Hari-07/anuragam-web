@@ -15,7 +15,7 @@ class Timer extends StatelessWidget {
       endTime: endTime,
       widgetBuilder: (_, CurrentRemainingTime? time) {
         if (time == null) {
-          return Text('Game over');
+          return TimerText('What\'s a flame, without a little spark?');
         } else if (time.hours != null) {
           return TimerText(
             time.hours.toString().padLeft(2, '0') + ':' + time.min.toString().padLeft(2, '0') + ':' + time.sec.toString().padLeft(2, '0'),
