@@ -44,8 +44,8 @@ class TimerText extends StatelessWidget {
     return AutoSizeText(
       string,
       maxLines: 1,
-      style: const TextStyle(
-        fontSize: 240,
+      style: TextStyle(
+        fontSize: MediaQuery.of(context).size.width > 768 ? 240 : 40,
         color: Color(0xFFAE3032),
         fontWeight: FontWeight.bold,
       ),
