@@ -24,9 +24,10 @@ class ReceiveMessage extends StatelessWidget {
             return AlertDialog(
               content: 
                 // height: 400,
-                // child: Column(
-                  // mainAxisSize: MainAxisSize.min,
-                  // children: [
+                // child: 
+                Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
                     Text(
                       submission.message,
                       style: TextStyle(
@@ -40,8 +41,16 @@ class ReceiveMessage extends StatelessWidget {
                 //       ),
                 //       textAlign: TextAlign.right,
                 //     )
-                //   ],
-                // ),
+                const SizedBox(height: 10,),
+                    Text(
+                      '- ' + submission.contact,
+                      style: TextStyle(
+                        fontSize: 20,
+                      ),
+                      textAlign: TextAlign.right,
+                    )
+                  ],
+                ),
               // ),
             );
           },
