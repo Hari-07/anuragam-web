@@ -5,16 +5,19 @@ class AnuragamFormField extends StatelessWidget {
     Key? key,
     required this.onChanged,
     required this.label,
+    required this.controller,
   }) : super(key: key);
 
   final Function(String) onChanged;
   final String label;
+  final TextEditingController controller;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 50,
       child: TextFormField(
+        controller: controller,
         onChanged: onChanged,
         decoration: InputDecoration(
           hintText: label,

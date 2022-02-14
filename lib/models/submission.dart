@@ -21,7 +21,7 @@ class Submission {
   factory Submission.empty() {
     return Submission(
       message: '',
-      contact: '',
+      contact: 'anonymous',
       randomValue: Random().nextDouble(),
       confirm: 1,
     );

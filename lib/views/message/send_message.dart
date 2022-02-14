@@ -13,6 +13,8 @@ class SendMessage extends StatefulWidget {
 
 class _SendMessageState extends State<SendMessage> {
   Submission _submission = Submission.empty();
+  TextEditingController controllerContact = TextEditingController();
+  TextEditingController controllerMessage = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -64,6 +66,7 @@ class _SendMessageState extends State<SendMessage> {
               });
             },
             label: 'Reach me at',
+            controller: controllerContact,
           ),
           const SizedBox(
             height: 15,
@@ -76,12 +79,20 @@ class _SendMessageState extends State<SendMessage> {
               });
             }),
             label: 'Message',
+            controller: controllerMessage,
           ),
           const Spacer(),
           AnuragamButton(
             onPressed: () async {
               if (_submission.isValid()) {
                 await SubmissionInterface.addSubmission(_submission);
+                controllerContact.value = TextEditingValue.empty;
+                controllerMessage.value = TextEditingValue.empty;
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(
+                    content: Text('Message sent succesfully'),
+                  ),
+                );
               } else {
                 ScaffoldMessenger.of(context).showSnackBar(
                   const SnackBar(
@@ -91,7 +102,7 @@ class _SendMessageState extends State<SendMessage> {
               }
             },
             text: 'Send',
-          )
+          ),
         ],
       ),
     );

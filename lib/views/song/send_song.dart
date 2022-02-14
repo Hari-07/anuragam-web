@@ -13,6 +13,7 @@ class SendSong extends StatefulWidget {
 
 class _SendSongState extends State<SendSong> {
   SongSubmission _songSubmission = SongSubmission.empty();
+  TextEditingController controllerSong = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -66,6 +67,7 @@ class _SendSongState extends State<SendSong> {
               });
             },
             label: 'Song link',
+            controller: controllerSong,
           ),
           const SizedBox(
             height: 15,
@@ -75,6 +77,12 @@ class _SendSongState extends State<SendSong> {
             onPressed: () async {
               if (_songSubmission.isValid()) {
                 await SubmissionInterface.addSongSubmission(_songSubmission);
+                controllerSong.value = TextEditingValue.empty;
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(
+                    content: Text('Song sent succesfully'),
+                  ),
+                );
               } else {
                 ScaffoldMessenger.of(context).showSnackBar(
                   const SnackBar(
