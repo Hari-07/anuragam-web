@@ -8,3 +8,6 @@ Simple flutter web project for Anuragam'22 NITC
 
 - flutter pub get
 - flutter run
+
+![merge_from_ofoct](https://user-images.githubusercontent.com/22373191/153834018-022c2325-cc81-4b5f-aba1-17d5d940ad09.png)
+
