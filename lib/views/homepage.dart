@@ -31,6 +31,7 @@ class HomePage extends StatelessWidget {
             height: 130,
           ),
           FutureSection(),
+          SizedBox(height: 100,)
         ],
       ),
     );

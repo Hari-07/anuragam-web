@@ -47,7 +47,7 @@ class FutureSection extends StatelessWidget {
             const SizedBox(
               height: 100,
             ),
-            const SizedBox(height: 10, child: SocialSection()),
+            const SizedBox(height: 40, child: SocialSection()),
             const SizedBox(
               height: 100,
             ),
@@ -71,7 +71,7 @@ class FutureSection extends StatelessWidget {
             const SizedBox(
               height: 100,
             ),
-            const SizedBox(height: 10, child: SocialSection()),
+            const SizedBox(height: 40, child: SocialSection()),
             const SizedBox(
               height: 100,
             ),

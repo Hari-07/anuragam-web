@@ -20,8 +20,8 @@ class SectionHeader extends StatelessWidget {
           style: const TextStyle(
             fontSize: 40,
             fontWeight: FontWeight.bold,
-            
           ),
+          textAlign: TextAlign.center,
         ),
         // Text(
         //   subtext,
