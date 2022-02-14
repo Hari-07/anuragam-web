@@ -11,7 +11,8 @@ class BannerWidget extends StatelessWidget {
     return Container(
       color: const Color(0xFFFFDDB2),
       width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.width > 768 ? MediaQuery.of(context).size.height : MediaQuery.of(context).size.height * 0.6,
+      // height: MediaQuery.of(context).size.width > 768 ? MediaQuery.of(context).size.height : MediaQuery.of(context).size.height * 0.6,
+      height: MediaQuery.of(context).size.height,
       child: Stack(
         alignment: Alignment.topCenter,
         children: [
