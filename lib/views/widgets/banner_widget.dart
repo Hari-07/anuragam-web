@@ -19,14 +19,15 @@ class BannerWidget extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
-            children: const [
-              SizedBox(height: 150,),
+            children: [
+              const SizedBox(height: 150,),
               AutoSizeText(
                 'Ragam Presents',
                 style: TextStyle(
                   fontSize: 32,
                   color: Color(0xFFAE3032),
                 ),
+                maxLines: 1,
               ),
               SizedBox(
                 height: 20,
@@ -36,9 +37,10 @@ class BannerWidget extends StatelessWidget {
                 style: TextStyle(
                   fontWeight: FontWeight.w400,
                   fontSize: 35,
-                  letterSpacing: 30,
+                  letterSpacing: MediaQuery.of(context).size.width > 768 ? 30 : 10,
                   color: Color(0xFFAE3032),
                 ),
+                maxLines: 1,
               ),
               SizedBox(
                 height: 5,

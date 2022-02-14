@@ -18,15 +18,15 @@ class Timer extends StatelessWidget {
           return Text('Game over');
         } else if (time.hours != null) {
           return TimerText(
-            '${time.hours} : ${time.min} : ${time.sec}',
+            time.hours.toString().padLeft(2, '0') + ':' + time.min.toString().padLeft(2, '0') + ':' + time.sec.toString().padLeft(2, '0'),
           );
         } else if(time.min != null) {
           return TimerText(
-            '00 : ${time.min} : ${time.sec}',
+            '00 :' + time.min.toString().padLeft(2, '0') +':' + time.sec.toString().padLeft(2, '0'),
           );
         } else {
           return TimerText(
-            '00 : 00 : ${time.sec}',
+            '00 : 00 :' +  time.sec.toString().padLeft(2, '0'),
           );
         }
       },
